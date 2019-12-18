@@ -1,0 +1,32 @@
+SQL ACTIVITY 1:
+
+1. Create a table that contains a user data with columns ID, first name, last name, School, year level.
+2. Populate your recently created table. 
+3. Select all records that have "[your_own_school_data]" as their school and Year Level is "4".
+4. Display all records in ASC order
+5. Select all the records where year level is 3 and displayed in descending order
+
+SQL ACTIVITY 2:
+
+Base your answers on this table and kindly populate the data on your localhost/phpmyadmin:
+
+CREATE TABLE IF NOT EXISTS `customers` (
+   custID int AUTO_INCREMENT PRIMARY KEY,
+   custFname varchar(100) NOT NULL,
+   custLname varchar(100) NOT NULL,
+   custCountry varchar(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `orders` (
+   orderID INT AUTO_INCREMENT PRIMARY KEY,
+   orderName varchar(100) NOT NULL,
+   orderPurchased TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP	
+   cust_ID int,
+   FOREIGN KEY(cust_ID) REFERENCES customers(custID)
+);
+
+
+1. Select all customers who ordered Items from the store and retrieve it.
+2. Write an SQL that will return all users who ordered "School Supplies" (Use Inner Join)
+3. Write an SQL that will return all customers who ordered "Toys" (USE LEFT JOIN)
+4. Write an SQL that will return all customers who ordered "Dove Cages" (USE RIGHT JOIN)
